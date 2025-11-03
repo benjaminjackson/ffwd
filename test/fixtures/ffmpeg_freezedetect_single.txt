@@ -1,0 +1,10 @@
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/6.0_1
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'input.mp4':
+  Duration: 00:02:00.50, start: 0.000000, bitrate: 5000 kb/s
+[Parsed_freezedetect_0 @ 0x123456789] freeze_start: 45.200000
+[Parsed_freezedetect_0 @ 0x123456789] freeze_duration: 5.500000
+[Parsed_freezedetect_0 @ 0x123456789] freeze_end: 50.700000
+frame=  3000 fps=120 q=-1.0 Lsize=N/A time=00:02:00.50 bitrate=N/A speed=4.8x
+video:0kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
