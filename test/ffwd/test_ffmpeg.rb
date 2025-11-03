@@ -39,5 +39,39 @@ module Ffwd
       freezes = FFmpeg.parse_freezes(output)
       assert_equal [], freezes
     end
+
+    def test_get_duration_calls_ffprobe_and_returns_duration
+      fixture_output = load_fixture("ffprobe_duration.txt")
+
+      File.stub :exist?, true do
+        FFmpeg.stub :`, fixture_output do
+          duration = FFmpeg.get_duration("test.mp4")
+          assert_equal 120.5, duration
+        end
+      end
+    end
+
+    def test_get_duration_raises_error_if_file_not_found
+      assert_raises(ArgumentError) do
+        FFmpeg.get_duration("nonexistent.mp4")
+      end
+    end
+
+    def test_detect_freezes_returns_parsed_freeze_regions
+      fixture_output = load_fixture("ffmpeg_freezedetect_multiple.txt")
+
+      File.stub :exist?, true do
+        FFmpeg.stub :`, fixture_output do
+          freezes = FFmpeg.detect_freezes("test.mp4", noise_threshold: -70, min_duration: 1.0)
+          assert_equal [[10.0, 15.0], [45.2, 50.7], [90.0, 93.0]], freezes
+        end
+      end
+    end
+
+    def test_detect_freezes_raises_error_if_file_not_found
+      assert_raises(ArgumentError) do
+        FFmpeg.detect_freezes("nonexistent.mp4")
+      end
+    end
   end
 end
