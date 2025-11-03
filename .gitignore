@@ -1,8 +1,38 @@
+# Bundler
 /.bundle/
+/vendor/bundle/
+
+# Documentation
 /.yardoc
 /_yardoc/
-/coverage/
 /doc/
-/pkg/
+
+# Test coverage
+/coverage/
 /spec/reports/
+.rspec_status
+
+# Build artifacts
+/pkg/
+*.gem
+
+# Temporary files
 /tmp/
+/log/
+*.log
+
+# Ruby bytecode
+*.rbc
+
+# Environment variables
+.env
+.env.local
+
+# Editor artifacts
+*.swp
+*.swo
+*~
+
+# OS artifacts
+.DS_Store
+Thumbs.db
