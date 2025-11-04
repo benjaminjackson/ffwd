@@ -32,6 +32,7 @@
 *.swp
 *.swo
 *~
+.claude
 
 # OS artifacts
 .DS_Store
