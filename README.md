@@ -1,23 +1,23 @@
-# ffwd
+# speedrun
 
 Automatically detect and remove freeze/low-motion regions from videos using ffmpeg.
 
 ## Description
 
-`ffwd` analyzes videos for frozen or low-motion segments (using ffmpeg's `freezedetect` filter) and removes them, stitching together only the active parts. Perfect for cleaning up screen recordings, presentation videos, or any footage with long static periods.
+`speedrun` analyzes videos for frozen or low-motion segments (using ffmpeg's `freezedetect` filter) and removes them, stitching together only the active parts. Perfect for cleaning up screen recordings, presentation videos, or any footage with long static periods.
 
 ## Installation
 
 Install the gem:
 
 ```bash
-gem install ffwd
+gem install speedrun
 ```
 
 Or add to your Gemfile:
 
 ```ruby
-gem 'ffwd'
+gem 'speedrun'
 ```
 
 ### Requirements
@@ -44,7 +44,7 @@ pacman -S ffmpeg
 Basic usage:
 
 ```bash
-ffwd trim input.mp4
+speedrun trim input.mp4
 ```
 
 This creates `input-trimmed.mp4` with frozen segments removed.
@@ -52,7 +52,7 @@ This creates `input-trimmed.mp4` with frozen segments removed.
 ### Options
 
 ```bash
-ffwd trim INPUT [OUTPUT] [options]
+speedrun trim INPUT [OUTPUT] [options]
 
 Options:
   -n, --noise THRESHOLD        # Noise tolerance in dB (default: -70)
@@ -61,11 +61,11 @@ Options:
   -q, --quiet                  # Minimal output
 
 Examples:
-  ffwd trim video.mp4                                    # Creates video-trimmed.mp4
-  ffwd trim video.mp4 output.mp4                         # Custom output name
-  ffwd trim video.mp4 --noise -60                        # More sensitive detection
-  ffwd trim video.mp4 --duration 2.0                     # Only remove freezes >= 2s
-  ffwd trim video.mp4 --dry-run                          # Preview analysis only
+  speedrun trim video.mp4                                    # Creates video-trimmed.mp4
+  speedrun trim video.mp4 output.mp4                         # Custom output name
+  speedrun trim video.mp4 --noise -60                        # More sensitive detection
+  speedrun trim video.mp4 --duration 2.0                     # Only remove freezes >= 2s
+  speedrun trim video.mp4 --dry-run                          # Preview analysis only
 ```
 
 #### Understanding the Noise Threshold
@@ -85,8 +85,8 @@ The default of `-70 dB` works well for most screen recordings. If you're getting
 ### Other Commands
 
 ```bash
-ffwd version                   # Show version
-ffwd help                      # Show help
+speedrun version                   # Show version
+speedrun help                      # Show help
 ```
 
 ## How It Works
@@ -123,7 +123,7 @@ bundle exec rake test          # Run full test suite
 ## Architecture
 
 ```
-lib/ffwd/
+lib/speedrun/
 ├── version.rb        # Version constant
 ├── formatter.rb      # Time/duration/filesize formatters
 ├── ffmpeg.rb         # FFmpeg command wrappers & parsers
@@ -133,7 +133,7 @@ lib/ffwd/
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/benjaminjackson/ffwd.
+Bug reports and pull requests are welcome on GitHub at https://github.com/benjaminjackson/speedrun.
 
 ## License
 

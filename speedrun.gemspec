@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require_relative "lib/ffwd/version"
+require_relative "lib/speedrun/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "ffwd"
-  spec.version = Ffwd::VERSION
+  spec.name = "speedrun"
+  spec.version = Speedrun::VERSION
   spec.authors = ["Benjamin Jackson"]
   spec.email = ["ben@hearmeout.co"]
 
   spec.summary = "Detect and remove freeze/low-motion regions from videos"
   spec.description = "CLI tool that uses ffmpeg to automatically detect frozen or low-motion segments in videos and remove them, stitching together the active parts."
-  spec.homepage = "https://github.com/benjaminjackson/ffwd"
+  spec.homepage = "https://github.com/benjaminjackson/speedrun"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/benjaminjackson/ffwd"
+  spec.metadata["source_code_uri"] = "https://github.com/benjaminjackson/speedrun"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

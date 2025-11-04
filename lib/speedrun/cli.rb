@@ -2,11 +2,11 @@
 
 require 'thor'
 
-module Ffwd
+module Speedrun
   class CLI < Thor
     desc "version", "Display version"
     def version
-      puts "ffwd version #{Ffwd::VERSION}"
+      puts "speedrun version #{Speedrun::VERSION}"
     end
 
     desc "trim INPUT [OUTPUT]", "Trim freeze/low-motion regions from video"

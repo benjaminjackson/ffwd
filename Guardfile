@@ -6,7 +6,7 @@ guard :minitest, autorun: false do
 
   # Watch test files and run corresponding test
   watch(%r{^test/test_(.+)\.rb$})
-  watch(%r{^test/ffwd/test_(.+)\.rb$})
+  watch(%r{^test/speedrun/test_(.+)\.rb$})
 
   # Watch test_helper and run all tests
   watch(%r{^test/test_helper\.rb$}) { 'test' }

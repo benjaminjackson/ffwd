@@ -2,8 +2,8 @@
 
 require "test_helper"
 
-class TestFfwd < Minitest::Test
+class TestSpeedrun < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Ffwd::VERSION
+    refute_nil ::Speedrun::VERSION
   end
 end

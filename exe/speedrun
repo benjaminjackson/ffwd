@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "ffwd"
+require "speedrun"
 
-Ffwd::CLI.start(ARGV)
+Speedrun::CLI.start(ARGV)

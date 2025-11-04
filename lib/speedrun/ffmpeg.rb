@@ -3,7 +3,7 @@
 require 'shellwords'
 require 'tempfile'
 
-module Ffwd
+module Speedrun
   module FFmpeg
     FREEZE_START_PATTERN = /freeze_start:\s*([\d.]+)/
     FREEZE_END_PATTERN = /freeze_end:\s*([\d.]+)/

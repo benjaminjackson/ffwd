@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ffwd
+module Speedrun
   module Formatter
     SECONDS_PER_MINUTE = 60
     SECONDS_PER_HOUR = 3600

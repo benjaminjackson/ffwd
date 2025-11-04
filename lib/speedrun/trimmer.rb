@@ -2,7 +2,7 @@
 
 require 'fileutils'
 
-module Ffwd
+module Speedrun
   class Trimmer
     attr_reader :input_file, :output_file
     attr_accessor :dry_run

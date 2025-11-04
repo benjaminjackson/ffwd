@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-module Ffwd
+module Speedrun
   class TestTrimmer < Minitest::Test
     def test_initializes_with_input_file
       File.stub :exist?, true do

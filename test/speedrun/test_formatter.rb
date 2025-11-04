@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-module Ffwd
+module Speedrun
   class TestFormatter < Minitest::Test
     def test_format_time_zero
       assert_equal "00:00:00.000", Formatter.format_time(0)

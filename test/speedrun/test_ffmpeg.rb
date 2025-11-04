@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-module Ffwd
+module Speedrun
   class TestFFmpeg < Minitest::Test
     def test_parse_duration_from_valid_output
       output = load_fixture("ffprobe_duration.txt")

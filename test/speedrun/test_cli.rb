@@ -2,14 +2,14 @@
 
 require "test_helper"
 
-module Ffwd
+module Speedrun
   class TestCLI < Minitest::Test
     def test_version_command
       output = capture_io do
         CLI.start(['version'])
       end.join
 
-      assert_match(/#{Ffwd::VERSION}/, output)
+      assert_match(/#{Speedrun::VERSION}/, output)
     end
 
     def test_trim_command_processes_file
